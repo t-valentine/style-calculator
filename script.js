@@ -3,6 +3,7 @@ let userinput = document.getElementById("input-number");
 
 wrapper.addEventListener("click", (event) => {
   const isButton = event.target.nodeName === "BUTTON";
+  let errorField = document.getElementById("error");
   if (isButton) {
     if (event.target.id == "equals") {
       if (/\d/.test(userinput.innerHTML)) {
@@ -10,16 +11,17 @@ wrapper.addEventListener("click", (event) => {
           userinput.innerHTML = eval(userinput.innerHTML);
         } catch (e) {
           if (e instanceof SyntaxError) {
-            document.getElementById("error").innerHTML =
-              "Invalid entry. Please try again.";
+            errorField.innerHTML = "Invalid entry. Please try again.";
           }
         }
       } else {
-        alert("fuckhead");
+        errorField.innerHTML = "Invalid entry. Please try again.";
       }
     } else if (event.target.id == "back") {
+      errorField.innerHTML = "";
       userinput.innerHTML = userinput.innerHTML.slice(0, -1);
     } else if (event.target.id == "clear") {
+      errorField.innerHTML = "";
       userinput.innerHTML = "";
     } else if (event.target.id == "negpos") {
       if (userinput.innerHTML.charAt(0) == "-") {
@@ -36,5 +38,13 @@ wrapper.addEventListener("click", (event) => {
 function switchTheme(e) {
   let themeLink = document.getElementById("theme");
   let theme = document.getElementById("theme-select").value;
-  themeLink.href = theme + ".css";
+  themeLink.href = "styles/" + theme + ".css";
+  if (theme != "none") {
+    let deleteButton = document.getElementById("back");
+
+    let deleteIcon = document.createElement("IMG");
+    deleteIcon.src = "assets/backspace-" + theme + ".png";
+    deleteButton.innerHTML = "";
+    deleteButton.appendChild(deleteIcon);
+  }
 }

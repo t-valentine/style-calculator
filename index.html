@@ -6,18 +6,28 @@
     <title>Style Calculator</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link id="theme" rel="stylesheet" href="minimalism.css" />
+    <link id="theme" rel="stylesheet" href="styles/minimalism.css" />
+    <style>
+      @media only screen and (max-width: 400px) {
+        #selection-menu {
+          margin: 0 !important;
+          padding-right: 0 !important;
+          width: 100vw;
+          text-align: center !important;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div style="margin: 0 auto; width: 400px">
+    <div style="margin: 0 auto; width: 100%">
       <div
         id="selection-menu"
-        style="text-align: right; margin: 150px 0 50px 0"
+        style="text-align: right; margin: 50px 0 50px 0; padding-right: 100px"
       >
         <label for="styles">Choose a style:</label>
         <select name="styles" id="theme-select" onchange="switchTheme()">
           <!-- Might not do all these but do at least 4-->
-          <option value="frutigeraero">Frutiger Aero</option>
+          <option value="frutigeraero" selected>Frutiger Aero</option>
           <option value="glassmorphism" disabled>Glassmorphism</option>
           <option value="neubrutalism" disabled>Neubrutalism</option>
           <option value="minimalism" selected>Minimalism</option>
@@ -27,8 +37,8 @@
           <option value="none">None</option>
         </select>
       </div>
-      <div class="calculator-wrapper" style="margin: auto">
-        <div id="top-number"><p id="input-number">0123456789</p></div>
+      <div class="calculator-wrapper" style="margin: auto; max-width: 500px">
+        <div id="top-number"><p id="input-number"></p></div>
         <div
           style="
             display: grid;
@@ -41,13 +51,13 @@
           <button>8</button>
           <button>9</button>
           <button>/</button>
-          <button id="back">Backspace</button>
+          <button id="back">X</button>
 
           <button>4</button>
           <button>5</button>
           <button>6</button>
           <button>*</button>
-          <button id="clear">Clear</button>
+          <button id="clear">C</button>
 
           <button>1</button>
           <button>2</button>
@@ -60,7 +70,7 @@
           <button>-</button>
           <button style="grid-row: 3 / 5; grid-column: 5" id="equals">=</button>
         </div>
-        <p id="error">Sample Error Text</p>
+        <p id="error"></p>
       </div>
     </div>
     <script src="script.js" async defer></script>

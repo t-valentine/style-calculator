@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400&display=swap");
+
+body {
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+#selection-menu label {
+  font-weight: 300;
+  font-size: 1em;
+}
+
+#theme-select {
+  background-color: #f3f3f3;
+  border: transparent;
+  height: 1.75em;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.calculator-wrapper {
+  padding-top: 2.5%;
+  width: 390px;
+}
+
+#buttons-div {
+  height: 300px;
+}
+
+#buttons-div button {
+  background-color: #3a3a3a;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1.5em;
+  margin: 8px 0;
+  transition: 0.25s;
+  width: 60px;
+}
+
+#buttons-div button:hover {
+  filter: brightness(180%);
+}
+
+#buttons-div #equals {
+  background-color: #ff6600;
+}
+
+#buttons-div #back img {
+  width: 1em;
+  height: 0.8em;
+  margin: 0;
+}
+
+#top-number {
+  border: transparent;
+  height: 3em;
+  margin-bottom: 20px;
+  width: 380px;
+}
+
+#input-number {
+  font-size: 3em;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-align: right;
+}
+
+#error {
+  font-size: 1.5em;
+  text-align: center;
+  color: #ff3c00;
+}
+
+@media only screen and (max-width: 400px) {
+  .calculator-wrapper {
+    padding-top: 0;
+    width: 300px;
+  }
+  #top-number {
+    width: 300px;
+  }
+
+  #buttons-div button {
+    font-weight: 300;
+    font-size: 1em;
+    width: 50px;
+  }
+}
