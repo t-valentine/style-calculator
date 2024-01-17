@@ -39,12 +39,14 @@ function switchTheme(e) {
   let themeLink = document.getElementById("theme");
   let theme = document.getElementById("theme-select").value;
   themeLink.href = "styles/" + theme + ".css";
-  if (theme != "none") {
-    let deleteButton = document.getElementById("back");
 
+  let deleteButton = document.getElementById("back");
+  if (theme != "none") {
     let deleteIcon = document.createElement("IMG");
     deleteIcon.src = "assets/backspace-" + theme + ".png";
     deleteButton.innerHTML = "";
     deleteButton.appendChild(deleteIcon);
+  } else {
+    deleteButton.innerHTML = "X";
   }
 }

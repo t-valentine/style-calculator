@@ -1,0 +1,55 @@
+body {
+  background-image: url(../assets/fabackground.jpeg);
+  background-color: #60c299;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.calculator-wrapper {
+  backdrop-filter: blur(20px);
+  height: 500px;
+  border-radius: 50px;
+}
+
+#top-number {
+  background-image: linear-gradient(
+    rgba(86, 95, 94, 0.9),
+    rgba(36, 39, 37, 0.9)
+  );
+  border-top: 5px solid #6f7a79;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid #242424;
+  border-radius: 50px;
+  backdrop-filter: blur(20px);
+  color: white;
+  height: 5em;
+  width: 470px;
+  margin-left: 9px;
+}
+
+#buttons-div {
+  height: 400px;
+}
+
+#buttons-div button {
+  background-color: transparent;
+  background-image: linear-gradient(
+    rgba(86, 95, 94, 0.9),
+    rgba(36, 39, 37, 0.9)
+  );
+  border-top: 5px solid #7b8887;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid black;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  margin: 10px auto 10px auto;
+  color: white;
+  width: 75px;
+}
+/*
+#buttons-div #equals {
+  height: 175px;
+}
+*/

@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
+  <!--
+    Thank you to:
+    - Icons8
+  -->
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Style Calculator</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link id="theme" rel="stylesheet" href="styles/minimalism.css" />
+    <link id="theme" rel="stylesheet" href="styles/frutigeraero.css" />
     <style>
       @media only screen and (max-width: 400px) {
         #selection-menu {
@@ -30,7 +34,7 @@
           <option value="frutigeraero" selected>Frutiger Aero</option>
           <option value="glassmorphism" disabled>Glassmorphism</option>
           <option value="neubrutalism" disabled>Neubrutalism</option>
-          <option value="minimalism" selected>Minimalism</option>
+          <option value="minimalism">Minimalism</option>
           <option value="skeuomorphism" disabled>Skeuomorphism</option>
           <option value="system1" disabled>System 1</option>
           <option value="windows95" disabled>Windows 95</option>
@@ -38,7 +42,7 @@
         </select>
       </div>
       <div class="calculator-wrapper" style="margin: auto; max-width: 500px">
-        <div id="top-number"><p id="input-number"></p></div>
+        <div id="top-number"><p id="input-number">1234567890</p></div>
         <div
           style="
             display: grid;
@@ -70,7 +74,7 @@
           <button>-</button>
           <button style="grid-row: 3 / 5; grid-column: 5" id="equals">=</button>
         </div>
-        <p id="error"></p>
+        <p id="error">testing error</p>
       </div>
     </div>
     <script src="script.js" async defer></script>
