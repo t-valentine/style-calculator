@@ -1,55 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400&display=swap");
+
 body {
   background-image: url(../assets/fabackground.jpeg);
   background-color: #60c299;
-  background-size: cover;
+  background-size: fill;
   background-repeat: no-repeat;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 200;
+}
+
+#selection-menu label {
+  font-size: 1em;
+}
+
+#theme-select {
+  background: linear-gradient(#5e5e5e, #202020);
+  border: transparent;
+  border-radius: 3px;
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
 }
 
 .calculator-wrapper {
-  backdrop-filter: blur(20px);
-  height: 500px;
+  /*backdrop-filter: blur(20px);*/
+  border: 1px solid black;
+  width: 350px;
+  height: 400px;
   border-radius: 50px;
 }
 
 #top-number {
-  background-image: linear-gradient(
-    rgba(86, 95, 94, 0.9),
-    rgba(36, 39, 37, 0.9)
-  );
-  border-top: 5px solid #6f7a79;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-bottom: 5px solid #242424;
-  border-radius: 50px;
   backdrop-filter: blur(20px);
-  color: white;
   height: 5em;
-  width: 470px;
+  width: 320px;
   margin-left: 9px;
 }
 
 #buttons-div {
-  height: 400px;
+  height: 260px;
+  width: 320px;
+  margin: 0 auto;
 }
 
 #buttons-div button {
   background-color: transparent;
-  background-image: linear-gradient(
-    rgba(86, 95, 94, 0.9),
-    rgba(36, 39, 37, 0.9)
-  );
-  border-top: 5px solid #7b8887;
-  border-right: 5px solid transparent;
-  border-left: 5px solid transparent;
-  border-bottom: 5px solid black;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  margin: 10px auto 10px auto;
+  background: linear-gradient(#6b6b6b9c, #6b6b6b 30%, #3a3a3a 50%, #202020);
+  border: transparent;
+  border-radius: 20px;
+  box-shadow: inset 0 -5px 5px 0 rgba(0, 0, 0, 0.25),
+    inset 0 5px 5px 0 rgba(255, 255, 255, 0.5);
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.35));
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.25em;
+  font-weight: 300;
   color: white;
-  width: 75px;
+  width: 60px;
+  margin-bottom: 5px;
 }
-/*
-#buttons-div #equals {
-  height: 175px;
+
+#buttons-div button:hover {
+  background: none;
+  color: black;
+  backdrop-filter: blur(10px);
 }
-*/
